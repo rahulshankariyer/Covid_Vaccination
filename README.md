@@ -32,7 +32,7 @@ Several records in the data had fields with null values which needed to be made 
 3. Using the data extracted in Step 2, the following analysis was performed in Jupyter Notebooks - <a href = "https://github.com/rahulshankariyer/PortolioProject/blob/main/Covid%20Vaccination%20Effect%20on%20Cases%20%26%20Deaths/Covid%2019%20Vaccinations%20vs%20Cases%20%26%20Deaths.ipynb"> Covid Vaccinations, Cases & Deaths With Time (Python) </a>
 4. A consolidated graph of the Dates against Vaccinations, Cases & Deaths, created in Tableau, is given below - 
 
-   ![alt text](./Covid%20Vaccination%20Effect%20on%20Cases%20%26%20Deaths/Covid%20Vaccination%20-%20Effect%20on%20Cases%20%26%20Deaths.png)
+   ![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Covid%20Vaccination%20-%20Effect%20on%20Cases%20%26%20Deaths.png)
 
 ## Insights
 
