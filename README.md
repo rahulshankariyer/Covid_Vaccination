@@ -29,23 +29,16 @@ Several records in the data had fields with null values which needed to be made 
 
 Using SQL Server Management Studio the data of Covid Vaccinations, Cases & Deaths by Date was extracted using the below query:
 
-   select d.date, 
+      --Vaccinations against Covid Cases and Deaths by date
 
-   sum(cast(d.new_cases as float)) as total_cases,
-
-   sum(cast(d.new_deaths as float)) as total_deaths,
-
-   sum(cast(v.new_vaccinations as float)) as total_vaccinations
-
-   from ProjectPortfolio..[Covid Deaths] d join ProjectPortfolio..[Covid Vaccinations] v 
-
-   on d.location = v.location and d.date = v.date
-
-   where d.continent is not null
-
-   group by d.date
-
-   order by d.date;
+      select d.date,sum(cast(d.new_cases as float)) as total_cases,
+      sum(cast(d.new_deaths as float)) as total_deaths,
+      sum(cast(v.new_vaccinations as float)) as total_vaccinations
+      from ProjectPortfolio..[Covid Deaths] d join ProjectPortfolio..[Covid Vaccinations] v
+      on d.location = v.location and d.date = v.date
+      where d.continent is not null
+      group by d.date
+      order by d.date;
 
 Using the data extracted from the above query, the following analysis was performed in Jupyter Notebooks - <a href = "https://github.com/rahulshankariyer/PortolioProject/blob/main/Covid%20Vaccination%20Effect%20on%20Cases%20%26%20Deaths/Covid%2019%20Vaccinations%20vs%20Cases%20%26%20Deaths.ipynb"> Covid Vaccinations, Cases & Deaths With Time (Python) </a>
 
