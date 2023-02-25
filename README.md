@@ -31,7 +31,8 @@ Using SQL Server Management Studio the data of Covid Vaccinations, Cases & Death
 
       --Vaccinations against Covid Cases and Deaths by date
 
-      select d.date,sum(cast(d.new_cases as float)) as total_cases,
+      select d.date,
+      sum(cast(d.new_cases as float)) as total_cases,
       sum(cast(d.new_deaths as float)) as total_deaths,
       sum(cast(v.new_vaccinations as float)) as total_vaccinations
       from ProjectPortfolio..[Covid Deaths] d join ProjectPortfolio..[Covid Vaccinations] v
