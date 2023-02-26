@@ -41,9 +41,30 @@ Using SQL Server Management Studio the data of Covid Vaccinations, Cases & Death
       group by d.date
       order by d.date;
 
-Using the data extracted from the above query, the following analysis was performed in Jupyter Notebooks - <a href = "https://github.com/rahulshankariyer/PortolioProject/blob/main/Covid%20Vaccination%20Effect%20on%20Cases%20%26%20Deaths/Covid%2019%20Vaccinations%20vs%20Cases%20%26%20Deaths.ipynb"> Covid Vaccinations, Cases & Deaths With Time (Python) </a>
+Using the data extracted from the above query, the following analysis was performed in Jupyter Notebooks:
 
-A consolidated graph of the Dates against Vaccinations, Cases & Deaths, created in Tableau, is given below - 
+      # Import Libraries
+
+      import pandas as pd
+      import seaborn as sns
+      import numpy as np
+
+      import matplotlib
+      import matplotlib.pyplot as plt
+      plt.style.use('ggplot')
+      from matplotlib.pyplot import figure
+      from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
+                                     AutoMinorLocator)
+      import matplotlib.dates as mdates
+
+      %matplotlib inline
+      matplotlib.rcParams['figure.figsize'] = (12,8) #Adjusts the configuration of the plots we will create
+
+      #Read in the data
+
+      df = pd.read_csv(r'C:\Users\rahulshankariyer\Documents\Vaccinations vs Covid Cases and Deaths by date.csv')
+
+A consolidated graph of the Dates against Vaccinations, Cases & Deaths, created in Tableau, is given below:
 
    ![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Covid%20Vaccination%20-%20Effect%20on%20Cases%20%26%20Deaths.png)
 
