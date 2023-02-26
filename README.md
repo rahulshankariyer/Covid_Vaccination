@@ -8,22 +8,18 @@ In this project, an analysis was done on whether the Covid Vaccinations led to a
 
 For this purpose, a Covid-19 dataset from the website <a href = "https://ourworldindata.org/covid-deaths"> Our World in Data </a> was used. This dataset contained various data on Covid Cases, Deaths, Testing and Vaccinations. The period chosen was January 1st, 2020 to November 21st, 2022. 
 
-## Tools Used
-
-1. Excel
-2. Microsoft SQL Server Management Studio
-3. Tableau
-4. Python
-
-## Data Transformations
-
 The data used for the purpose of this analysis were:
 
 1. Vaccination Data
 2. Postivity Rates
 3. Death Rates
 
-Several records in the data had fields with null values which needed to be made into '0' for performing various mathematical calculations on them. So those fields were changed from null to '0'. Most of these null values were during the period prior to roll out of vaccines.
+## Tools Used
+
+1. Excel
+2. Microsoft SQL Server Management Studio
+3. Tableau
+4. Python
 
 ## Analysis
 
@@ -63,6 +59,18 @@ Using the data extracted from the above query, the following analysis was perfor
       #Read in the data
 
       df = pd.read_csv(r'C:\Users\rahulshankariyer\Documents\Vaccinations vs Covid Cases and Deaths by date.csv')
+
+Several records in the data had fields with null values which mostly were during the period prior to the roll out of vaccines.
+
+      #Let's look at the date wise data
+
+      df.head()
+
+So those fields were changed from null to '0' for performing various mathematical calculations on them. 
+
+      #Replacing null values with 0
+
+      df.replace(to_replace = np.nan,value = 0)
 
 A consolidated graph of the Dates against Vaccinations, Cases & Deaths, created in Tableau, is given below:
 
