@@ -71,6 +71,10 @@ So those fields were changed from null to '0' for performing various mathematica
       #Replacing null values with 0
 
       df.replace(to_replace = np.nan,value = 0)
+      
+The Vaccinations, Cases & Deaths were then plotted against the dates:
+
+
 
 A consolidated graph of the Dates against Vaccinations, Cases & Deaths, created in Tableau, is given below:
 
