@@ -74,11 +74,36 @@ So those fields were changed from null to '0' for performing various mathematica
       
 The Vaccinations, Cases & Deaths were then plotted against the dates:
 
+      # Date vs Vaccinations
 
+      sns.relplot(x = 'date',y = 'total_vaccinations',data = df,kind = 'line',height = 5,aspect = 2)
+      plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+      plt.xticks(rotation=45)
+      plt.show()
+      
+![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Date%20vs%20Vaccinations.png)
+
+      # Date vs Cases
+
+      sns.relplot(x = 'date',y = 'total_cases',data = df,kind = 'line',height = 5,aspect = 2)
+      plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+      plt.xticks(rotation=45)
+      plt.show()
+
+![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Date%20vs%20Cases.png)
+
+      # Date vs Deaths
+
+      sns.relplot(x = 'date',y = 'total_deaths',data = df,kind = 'line',height = 5,aspect = 2)
+      plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+      plt.xticks(rotation=45)
+      plt.show()
+      
+![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Date%20vs%20Deaths.png)
 
 A consolidated graph of the Dates against Vaccinations, Cases & Deaths, created in Tableau, is given below:
 
-   ![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Covid%20Vaccination%20-%20Effect%20on%20Cases%20%26%20Deaths.png)
+![alt text](https://raw.githubusercontent.com/rahulshankariyer/Covid_Vaccination/main/Covid%20Vaccination%20-%20Effect%20on%20Cases%20%26%20Deaths.png)
 
 ## Insights
 
